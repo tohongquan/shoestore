@@ -1,0 +1,24 @@
+- Cách cài đặt dự án laravel clone từ github
+
+link: https://viblo.asia/p/cach-cai-dat-du-an-laravel-clone-tu-github-63vKjkpkZ2R
+- Vào mysql tạo cơ sở dữ liệu
+
+tên cở dữ liệu: shopgiayonline
+loại dữ liệu lưu vào csdl: utf8mb4_unicode_ci 
+
+- Vào file .env tìm đến đoạn này để setup cấu hình kết nối với mysql:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=Cổng kết nối mysql(Xampp hoặc Laragon)
+DB_DATABASE=Tên CSDL tạo trong mysql
+DB_USERNAME=root
+DB_PASSWORD=
+
+- Tạo tài khoản đăng nhập
+
+INSERT INTO `users` (`id`, `name`, `email`, `level`, `active`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES (NULL, 'Admin', 'localhost@gmail.com', '1', '1', NULL, '$2y$10$3JouHCI7MRvJVeiHeoCKa.N4lb19shGoQxbetoGN7R0XqnlxUKrb6', 'NknBUFLB9ipcCqECTX6zOxcdBqcWDcvj8TNl39LDlJF8XOFn4znmDGYSWlni', NULL, NULL);
+
+- Chạy lệnh sql trên trong mysql để tạo tài khoản mật khẩu: mật khẩu là 123 đã được mã hóa
+
+- Đăng nhập
